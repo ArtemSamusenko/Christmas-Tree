@@ -1,8 +1,13 @@
+from colorama import Fore
+import random
+
+colors = [Fore.RED, Fore.YELLOW, Fore.GREEN]
+
 while True:
     try:
         amount = int(input("How many layers of leaves do you want?\n:"))
         break
-    except:
+    except():
         print("You didn't put a number!\n")
 
 leaves = "*"
@@ -13,7 +18,7 @@ for i in range(1, amount + 1):
     else:
         leavesNum += 2
     space = amount - i
-    print((space * " ") + (leavesNum * leaves))
-print(((amount // 2) * " ") + "| |")
+    print(random.choice(colors) + (space * " ") + (leavesNum * leaves))
 
+print(((amount - 2) * " ") + "| |")
 
