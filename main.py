@@ -20,5 +20,4 @@ for i in range(1, amount + 1):
     space = amount - i
     print(random.choice(colors) + (space * " ") + (leavesNum * leaves))
 
-print(((amount - 2) * " ") + "| |")
-
+print(Fore.LIGHTBLACK_EX + ((amount - 2) * " ") + "| |")
